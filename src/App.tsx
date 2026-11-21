@@ -31,7 +31,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-jawai-black text-jawai-ivory selection:bg-jawai-burnt-orange selection:text-white">
+    <div className="min-h-screen bg-jawai-bg text-jawai-text selection:bg-jawai-amber selection:text-white">
       {/* Fixed Navigation */}
       <Navbar onOpenBookingModal={() => handleOpenBookingModal()} />
 

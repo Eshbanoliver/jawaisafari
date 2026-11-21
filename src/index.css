@@ -9,28 +9,28 @@
   }
 
   body {
-    background-color: #101411;
-    color: #F6F2E9;
+    background-color: #FAF8F5;
+    color: #111815;
     overflow-x: hidden;
   }
 
-  /* Custom Luxury Scrollbar */
+  /* Custom Light Luxury Scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
   }
   ::-webkit-scrollbar-track {
-    background: #0d1813;
+    background: #FAF8F5;
   }
   ::-webkit-scrollbar-thumb {
-    background: #77816A;
+    background: #D97706;
     border-radius: 4px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #D6C2A0;
+    background: #E65100;
   }
 }
 
-/* Subtle Film Grain Texture Overlay */
+/* Subtle Warm Linen Texture */
 .grain-overlay {
   position: relative;
 }
@@ -42,39 +42,47 @@
   right: 0;
   bottom: 0;
   pointer-events: none;
-  background-image: radial-gradient(rgba(214, 194, 160, 0.04) 1px, transparent 0);
+  background-image: radial-gradient(rgba(217, 119, 6, 0.05) 1px, transparent 0);
   background-size: 24px 24px;
-  opacity: 0.6;
+  opacity: 0.8;
   z-index: 1;
 }
 
-/* Luxury Editorial Image Reveal Mask */
+/* Luxury Editorial Image Reveal Frame */
 .editorial-frame {
   position: relative;
   overflow: hidden;
+  border-radius: 0.5rem;
 }
 
 .editorial-frame::after {
   content: '';
   position: absolute;
   inset: 0;
-  border: 1px solid rgba(214, 194, 160, 0.15);
+  border: 1px solid rgba(229, 221, 207, 0.8);
   pointer-events: none;
   transition: border-color 0.4s ease;
 }
 
 .editorial-frame:hover::after {
-  border-color: rgba(214, 194, 160, 0.45);
+  border-color: rgba(230, 81, 0, 0.5);
 }
 
-/* Elegant Text Shimmer */
-@keyframes subtle-shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+/* Vibrant Text Gradients */
+.text-vibrant-gradient {
+  background: linear-gradient(135deg, #111815 0%, #E65100 60%, #D97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.text-gold-gradient {
-  background: linear-gradient(135deg, #F6F2E9 0%, #D6C2A0 50%, #B76E3B 100%);
+.text-amber-gradient {
+  background: linear-gradient(135deg, #E65100 0%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-emerald-gradient {
+  background: linear-gradient(135deg, #047857 0%, #10B981 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

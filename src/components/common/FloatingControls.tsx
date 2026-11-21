@@ -34,7 +34,7 @@ export const FloatingControls: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             onClick={scrollToTop}
-            className="w-11 h-11 bg-jawai-forest/90 border border-jawai-sand/30 text-jawai-sand hover:text-white hover:bg-jawai-forest flex items-center justify-center rounded-full shadow-lg transition-colors backdrop-blur-sm"
+            className="w-11 h-11 bg-white border border-stone-200 text-jawai-amber hover:text-white hover:bg-jawai-amber flex items-center justify-center rounded-full shadow-lg transition-all backdrop-blur-sm"
             aria-label="Scroll to top"
           >
             <ArrowUp className="w-5 h-5" />
@@ -42,10 +42,10 @@ export const FloatingControls: React.FC = () => {
         )}
       </AnimatePresence>
 
-      {/* Floating Call Button (Very useful for mobile safari inquiries) */}
+      {/* Floating Call Button */}
       <a
         href={`tel:${BUSINESS_INFO.phoneRaw}`}
-        className="w-12 h-12 bg-jawai-forest border border-jawai-sand/40 text-jawai-sand hover:text-white hover:bg-jawai-burnt-orange flex items-center justify-center rounded-full shadow-xl transition-all duration-300 hover:scale-105"
+        className="w-12 h-12 bg-gradient-to-r from-jawai-amber to-jawai-terracotta text-white flex items-center justify-center rounded-full shadow-xl transition-all duration-300 hover:scale-110 active:scale-95"
         aria-label="Call Jawai Safari Hub"
         title="Call +91 76900 00774"
       >
@@ -57,7 +57,7 @@ export const FloatingControls: React.FC = () => {
         href={getGeneralEnquiryUrl()}
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative flex items-center bg-[#25D366] hover:bg-[#20ba5a] text-white p-3 md:px-5 md:py-3 rounded-full shadow-2xl transition-all duration-300 hover:scale-105"
+        className="group relative flex items-center bg-[#25D366] hover:bg-[#20ba5a] text-white p-3 md:px-5 md:py-3.5 rounded-full shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95"
         aria-label="Chat on WhatsApp"
       >
         {/* Radar Pulse ring */}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Clock, Sun, CheckCircle2, MessageSquare } from 'lucide-react';
+import { ArrowUpRight, Clock, Sun, CheckCircle2, MessageSquare, Sparkles } from 'lucide-react';
 import { EXPERIENCES, type ExperienceItem } from '../../data/safariData';
 import { getExperienceEnquiryUrl } from '../../utils/whatsapp';
 
@@ -10,20 +10,21 @@ interface ExperiencesSectionProps {
 
 export const ExperiencesSection: React.FC<ExperiencesSectionProps> = ({ onSelectExperience }) => {
   return (
-    <section id="experiences" className="py-24 md:py-36 bg-jawai-black text-jawai-ivory relative">
+    <section id="experiences" className="py-24 md:py-36 bg-jawai-surface-alt/50 text-jawai-text relative border-b border-stone-200/60">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24 border-b border-jawai-sand/15 pb-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-24 border-b border-stone-200 pb-8">
           <div>
-            <span className="text-[11px] uppercase tracking-[0.3em] text-jawai-sand font-semibold font-sans block mb-3">
-              EXPEDITIONS & DRIVES
-            </span>
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-jawai-ivory font-normal">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 bg-amber-100 rounded-full text-jawai-amber text-xs font-bold uppercase tracking-wider mb-3">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>EXPEDITIONS & DRIVES</span>
+            </div>
+            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-jawai-text font-normal">
               Choose Your Wild <br />
-              <span className="text-jawai-sand italic">Experience.</span>
+              <span className="text-jawai-amber italic">Experience.</span>
             </h2>
           </div>
-          <p className="mt-4 md:mt-0 max-w-md text-sm text-jawai-ivory/70 font-sans leading-relaxed">
+          <p className="mt-4 md:mt-0 max-w-md text-sm text-stone-600 font-sans leading-relaxed">
             Immersive tracker-led expeditions designed to connect you directly with Jawai's wildlife, granite kopjes, and off-road terrain.
           </p>
         </div>
@@ -44,37 +45,42 @@ export const ExperiencesSection: React.FC<ExperiencesSectionProps> = ({ onSelect
                   isReversed ? 'lg:flex-row-reverse' : ''
                 }`}
               >
-                {/* Visual Image Block with Hover Zoom */}
+                {/* Visual Image Block with Hover Zoom & Vibrant Badge */}
                 <div
                   className={`lg:col-span-7 relative group overflow-hidden ${
                     isReversed ? 'lg:order-2' : 'lg:order-1'
                   }`}
                 >
-                  <div className="editorial-frame relative h-[380px] sm:h-[480px] lg:h-[540px] overflow-hidden bg-jawai-forest">
+                  <div className="editorial-frame relative h-[380px] sm:h-[480px] lg:h-[540px] overflow-hidden bg-white shadow-xl rounded-2xl border border-stone-200">
                     <img
                       src={exp.image}
                       alt={exp.title}
                       className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-jawai-black/80 via-transparent to-jawai-black/20 pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/10 pointer-events-none" />
 
-                    {/* Prominent Number Badge */}
-                    <div className="absolute top-6 left-6 z-10 bg-jawai-black/85 backdrop-blur-md px-4 py-2 border border-jawai-sand/30">
-                      <span className="font-serif text-2xl text-jawai-sand font-light">
+                    {/* Prominent Number Badge in Vibrant Amber */}
+                    <div className="absolute top-6 left-6 z-10 bg-gradient-to-r from-jawai-amber to-jawai-terracotta text-white px-4 py-2 rounded-xl shadow-lg">
+                      <span className="font-serif text-2xl font-bold tracking-wider">
                         {exp.number}
                       </span>
                     </div>
 
-                    {/* Best Time Tag */}
-                    <div className="absolute bottom-6 left-6 right-6 z-10 flex items-center justify-between text-xs text-jawai-ivory/90 font-sans">
-                      <span className="flex items-center space-x-1.5 bg-jawai-forest/90 backdrop-blur-md px-3 py-1.5 border border-jawai-sand/20">
-                        <Sun className="w-3.5 h-3.5 text-jawai-sand" />
+                    {/* AI Generated Badge */}
+                    <div className="absolute top-6 right-6 z-10 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full border border-amber-200 text-[10px] font-bold uppercase tracking-wider text-jawai-amber shadow-sm">
+                      AI Generated · 8K
+                    </div>
+
+                    {/* Best Time & Duration Tag */}
+                    <div className="absolute bottom-6 left-6 right-6 z-10 flex items-center justify-between text-xs text-white font-sans gap-2 flex-wrap">
+                      <span className="flex items-center space-x-1.5 bg-white/90 text-jawai-text backdrop-blur-md px-3.5 py-2 rounded-lg font-semibold shadow-md">
+                        <Sun className="w-4 h-4 text-jawai-amber" />
                         <span>{exp.bestTime}</span>
                       </span>
 
-                      <span className="flex items-center space-x-1.5 bg-jawai-forest/90 backdrop-blur-md px-3 py-1.5 border border-jawai-sand/20">
-                        <Clock className="w-3.5 h-3.5 text-jawai-sand" />
+                      <span className="flex items-center space-x-1.5 bg-white/90 text-jawai-text backdrop-blur-md px-3.5 py-2 rounded-lg font-semibold shadow-md">
+                        <Clock className="w-4 h-4 text-jawai-amber" />
                         <span>{exp.durationPlaceholder}</span>
                       </span>
                     </div>
@@ -88,28 +94,28 @@ export const ExperiencesSection: React.FC<ExperiencesSectionProps> = ({ onSelect
                   }`}
                 >
                   <div className="space-y-2">
-                    <span className="text-[10px] uppercase tracking-[0.25em] text-jawai-sand font-semibold font-sans">
+                    <span className="text-xs uppercase tracking-[0.25em] text-jawai-amber font-bold font-sans">
                       EXPERIENCE {exp.number}
                     </span>
-                    <h3 className="font-serif text-3xl sm:text-4xl text-jawai-ivory font-normal tracking-wide">
+                    <h3 className="font-serif text-3xl sm:text-4xl text-jawai-text font-normal tracking-wide">
                       {exp.title}
                     </h3>
                   </div>
 
-                  <p className="font-serif italic text-lg text-jawai-sand/90">
+                  <p className="font-serif italic text-lg text-amber-700 bg-amber-50/70 p-3 rounded-lg border-l-4 border-jawai-amber">
                     "{exp.shortDescription}"
                   </p>
 
-                  <p className="text-sm text-jawai-ivory/75 font-sans leading-relaxed">
+                  <p className="text-sm text-stone-600 font-sans leading-relaxed">
                     {exp.detailedDescription}
                   </p>
 
-                  {/* Highlights list */}
+                  {/* Highlights list with vibrant green check icons */}
                   <div className="space-y-2.5 pt-2">
                     {exp.highlights.map((item, idx) => (
-                      <div key={idx} className="flex items-start space-x-2.5 text-xs text-jawai-ivory/80 font-sans">
-                        <CheckCircle2 className="w-4 h-4 text-jawai-sand shrink-0 mt-0.5" />
-                        <span>{item}</span>
+                      <div key={idx} className="flex items-start space-x-2.5 text-xs text-stone-700 font-sans">
+                        <CheckCircle2 className="w-4 h-4 text-jawai-emerald shrink-0 mt-0.5" />
+                        <span className="font-medium">{item}</span>
                       </div>
                     ))}
                   </div>
@@ -120,7 +126,7 @@ export const ExperiencesSection: React.FC<ExperiencesSectionProps> = ({ onSelect
                       href={getExperienceEnquiryUrl(exp.title)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-6 py-3.5 bg-jawai-sand hover:bg-jawai-burnt-orange text-jawai-black hover:text-white font-sans text-xs font-bold uppercase tracking-[0.2em] transition-all flex items-center space-x-2"
+                      className="px-6 py-3.5 bg-gradient-to-r from-jawai-amber to-jawai-terracotta hover:from-jawai-amber-vibrant hover:to-jawai-amber text-white font-sans text-xs font-bold uppercase tracking-[0.2em] transition-all rounded-xl shadow-md hover:shadow-vibrant-glow flex items-center space-x-2"
                     >
                       <MessageSquare className="w-4 h-4" />
                       <span>Enquire on WhatsApp</span>
@@ -128,10 +134,10 @@ export const ExperiencesSection: React.FC<ExperiencesSectionProps> = ({ onSelect
 
                     <button
                       onClick={() => onSelectExperience(exp.title)}
-                      className="px-6 py-3.5 border border-jawai-sand/30 hover:border-jawai-sand text-jawai-ivory hover:text-jawai-sand font-sans text-xs uppercase tracking-[0.18em] transition-all flex items-center space-x-1.5"
+                      className="px-6 py-3.5 bg-white border border-stone-300 hover:border-jawai-amber text-stone-800 hover:text-jawai-amber font-sans text-xs uppercase tracking-[0.18em] transition-all rounded-xl shadow-sm flex items-center space-x-1.5 font-semibold"
                     >
                       <span>Custom Plan</span>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
+                      <ArrowUpRight className="w-3.5 h-3.5 text-jawai-amber" />
                     </button>
                   </div>
                 </div>

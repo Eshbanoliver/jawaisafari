@@ -1,23 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Sparkles, MapPin } from 'lucide-react';
 import { DESTINATION_STORY } from '../../data/safariData';
 
 export const DestinationSection: React.FC = () => {
   return (
-    <section id="destination" className="py-24 md:py-36 bg-jawai-forest text-jawai-ivory relative grain-overlay">
+    <section id="destination" className="py-24 md:py-36 bg-jawai-surface-alt/40 text-jawai-text relative grain-overlay border-b border-stone-200/60">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
-          <span className="text-[11px] uppercase tracking-[0.3em] text-jawai-sand font-semibold font-sans block">
-            THE GEOGRAPHY & HERITAGE
-          </span>
+          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-amber-100 rounded-full text-jawai-amber text-xs font-bold uppercase tracking-wider">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>THE GEOGRAPHY & HERITAGE</span>
+          </div>
 
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-jawai-ivory font-normal leading-[1.12]">
+          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-jawai-text font-normal leading-[1.12]">
             "Discover The Magic <br />
-            <span className="text-jawai-sand italic">Of Jawai."</span>
+            <span className="text-jawai-amber italic">Of Jawai."</span>
           </h2>
 
-          <p className="text-sm md:text-base text-jawai-ivory/70 font-sans font-light leading-relaxed">
+          <p className="text-sm md:text-base text-stone-600 font-sans font-normal leading-relaxed">
             A prehistoric realm of granite kopjes, tranquil wetlands, and a sacred bond between predators and shepherds.
           </p>
         </div>
@@ -44,20 +46,25 @@ export const DestinationSection: React.FC = () => {
                     isReversed ? 'lg:order-2' : 'lg:order-1'
                   }`}
                 >
-                  <div className="editorial-frame relative h-80 sm:h-96 lg:h-[460px] overflow-hidden shadow-2xl">
+                  <div className="editorial-frame relative h-80 sm:h-96 lg:h-[460px] overflow-hidden shadow-xl rounded-2xl bg-white border border-stone-200">
                     <img
                       src={story.image}
                       alt={story.title}
-                      className="w-full h-full object-cover object-center filter brightness-95 contrast-105"
+                      className="w-full h-full object-cover object-center filter brightness-100 contrast-105"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-jawai-forest-dark/80 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
 
                     {/* Stat Badge */}
-                    <div className="absolute top-6 left-6 bg-jawai-black/85 backdrop-blur-sm border border-jawai-sand/30 px-3.5 py-1.5">
-                      <span className="text-[10px] font-sans font-semibold uppercase tracking-widest text-jawai-sand">
+                    <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-sm border border-amber-200 px-4 py-1.5 rounded-full shadow-md">
+                      <span className="text-[11px] font-sans font-bold uppercase tracking-wider text-jawai-amber">
                         {story.statBadge}
                       </span>
+                    </div>
+
+                    {/* AI Generated Tag */}
+                    <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded-full text-[9px] font-bold uppercase tracking-wider text-stone-700 shadow-sm border border-stone-200">
+                      AI Visual · 8K
                     </div>
                   </div>
                 </div>
@@ -68,19 +75,20 @@ export const DestinationSection: React.FC = () => {
                     isReversed ? 'lg:order-1' : 'lg:order-2'
                   }`}
                 >
-                  <span className="text-xs uppercase tracking-[0.25em] text-jawai-sand font-sans block">
-                    Chapter 0{idx + 1}
-                  </span>
+                  <div className="flex items-center space-x-2 text-xs uppercase tracking-[0.25em] text-jawai-amber font-bold font-sans">
+                    <MapPin className="w-3.5 h-3.5" />
+                    <span>Chapter 0{idx + 1}</span>
+                  </div>
 
-                  <h3 className="font-serif text-3xl sm:text-4xl text-jawai-ivory font-normal leading-tight">
+                  <h3 className="font-serif text-3xl sm:text-4xl text-jawai-text font-normal leading-tight">
                     {story.title}
                   </h3>
 
-                  <p className="font-serif italic text-lg text-jawai-sand/90">
+                  <p className="font-serif italic text-lg text-amber-700 bg-amber-50/80 p-3 rounded-lg border-l-4 border-jawai-amber">
                     "{story.subtitle}"
                   </p>
 
-                  <p className="text-sm text-jawai-ivory/75 font-sans leading-relaxed font-light">
+                  <p className="text-sm text-stone-600 font-sans leading-relaxed">
                     {story.description}
                   </p>
                 </div>

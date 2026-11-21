@@ -6,114 +6,100 @@ export interface SafariImage {
   alt: string;
   caption: string;
   location?: string;
+  badge?: string;
 }
 
 export const IMAGES = {
-  // Hero Background: Breathtaking Indian leopard on massive granite rock during golden hour
-  heroBackground: "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=85&w=2160&auto=format&fit=crop",
+  // Hero: AI-Generated Indian Leopard on massive granite kopjes at golden hour
+  heroBackground: "/images/ai-hero-leopard.jpg",
   
-  // Alternative high-res leopard on granite
-  heroLeopardAlt: "https://images.unsplash.com/photo-1456926631375-92c8ce872def?q=85&w=2160&auto=format&fit=crop",
-
   // Editorial Introduction
-  introLeopard: "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?q=85&w=1600&auto=format&fit=crop",
-  introGraniteHills: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=85&w=1600&auto=format&fit=crop",
+  introLeopard: "/images/ai-hero-leopard.jpg",
+  introGraniteHills: "/images/ai-jeep-safari.jpg",
 
-  // Experiences
+  // Core Safari Experiences (AI-Generated bespoke visuals)
   experiences: {
-    leopardSafari: "https://images.unsplash.com/photo-1549480017-d76466a4b7e8?q=85&w=1600&auto=format&fit=crop",
-    jeepSafari: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=85&w=1600&auto=format&fit=crop",
-    wildlifeNature: "https://images.unsplash.com/photo-1534177616072-ef7dc120449d?q=85&w=1600&auto=format&fit=crop",
+    leopardSafari: "/images/ai-hero-leopard.jpg",
+    jeepSafari: "/images/ai-jeep-safari.jpg",
+    wildlifeNature: "/images/ai-jawai-dam.jpg",
   },
 
-  // Packages
+  // Safari Packages
   packages: {
-    essential: "https://images.unsplash.com/photo-1516426122078-c23e76319801?q=85&w=1600&auto=format&fit=crop",
-    explorer: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=85&w=1600&auto=format&fit=crop",
-    ultimate: "https://images.unsplash.com/photo-1535083783855-76ae62b2914e?q=85&w=1600&auto=format&fit=crop",
+    essential: "/images/ai-hero-leopard.jpg",
+    explorer: "/images/ai-jeep-safari.jpg",
+    ultimate: "/images/ai-jawai-dam.jpg",
   },
 
-  // Jawai Destination Story
+  // Jawai Destination Storytelling
   destination: {
-    graniteBoulders: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=85&w=1600&auto=format&fit=crop",
-    jawaiDam: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=85&w=1600&auto=format&fit=crop",
-    rabariHarmony: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=85&w=1600&auto=format&fit=crop",
-    goldenHourHills: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=85&w=1600&auto=format&fit=crop",
+    graniteBoulders: "/images/ai-jeep-safari.jpg",
+    jawaiDam: "/images/ai-jawai-dam.jpg",
+    rabariHarmony: "/images/ai-rabari-heritage.jpg",
+    goldenHourHills: "/images/ai-hero-leopard.jpg",
   },
 
-  // Full Gallery with categorized items for the interactive lightbox
+  // Curated AI-Generated Gallery & Expedition Shots
   gallery: [
     {
       id: "gal-1",
-      title: "Monarch of the Granite Kopjes",
+      title: "The Leopard of the Kopjes",
       category: "leopard",
-      url: "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=85&w=1600&auto=format&fit=crop",
-      alt: "Indian leopard resting on smooth granite boulder in Jawai at sunset",
-      caption: "An elusive Indian leopard overlooking its rocky territory from an ancient granite cliff.",
-      location: "Bera - Jawai Granite Hills"
+      url: "/images/ai-hero-leopard.jpg",
+      alt: "AI generated photorealistic Indian leopard on giant granite rock in Jawai at sunset",
+      caption: "A magnificent wild Indian leopard lounging atop prehistoric granite boulders overlooking the Jawai horizon.",
+      location: "Bera - Jawai Granite Kopjes",
+      badge: "AI Generated · 8K"
     },
     {
       id: "gal-2",
-      title: "Granite Rock Scaling 4x4",
+      title: "Granite Rock Scaling 4x4 Gypsy",
       category: "safari",
-      url: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=85&w=1600&auto=format&fit=crop",
-      alt: "Open 4x4 safari vehicle traversing steep granite terrain in Jawai",
-      caption: "Specialized open 4x4 safari vehicles navigate challenging 60-degree granite rock formations.",
-      location: "Jawai Wilderness Trail"
+      url: "/images/ai-jeep-safari.jpg",
+      alt: "AI generated 4x4 open safari vehicle climbing steep granite boulder in Jawai at golden hour",
+      caption: "Custom open 4x4 safari jeep navigating thrilling 60-degree granite rock formations with local trackers.",
+      location: "Jawai Off-road Trails",
+      badge: "AI Generated · 8K"
     },
     {
       id: "gal-3",
-      title: "Jawai Dam Wetland Waters",
+      title: "Jawai Dam Wetland Sanctuary",
       category: "landscape",
-      url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=85&w=1600&auto=format&fit=crop",
-      alt: "Jawai Bandh reservoir surrounded by prehistoric granite hills",
-      caption: "The majestic expanse of Jawai Bandh, sanctuary to marsh mugger crocodiles and migratory birds.",
-      location: "Jawai Bandh, Pali District"
+      url: "/images/ai-jawai-dam.jpg",
+      alt: "AI generated Jawai Dam lake with turquoise water, granite hills, crocodiles and flamingos",
+      caption: "The sparkling turquoise waters of Jawai Bandh, haven to basking marsh crocodiles and migratory flamingos.",
+      location: "Jawai Bandh, Pali District",
+      badge: "AI Generated · 8K"
     },
     {
       id: "gal-4",
-      title: "Twilight Leopard Vigil",
+      title: "Leopard Portrait in Granite Fissure",
       category: "leopard",
-      url: "https://images.unsplash.com/photo-1456926631375-92c8ce872def?q=85&w=1600&auto=format&fit=crop",
-      alt: "Leopard perched gracefully on high rock ledge at dusk",
-      caption: "The evening safari tracking brings breathtaking encounters right before twilight settles.",
-      location: "Perwa Cave Hills"
+      url: "/images/ai-leopard-portrait.jpg",
+      alt: "AI generated portrait of Indian leopard with piercing amber eyes in rock cave",
+      caption: "Intimate close-up of a Jawai leopard resting inside naturally weathered volcanic granite caves.",
+      location: "Perwa Cave Sanctuary",
+      badge: "AI Generated · 8K"
     },
     {
       id: "gal-5",
-      title: "Sunset Over Granite Monoliths",
-      category: "landscape",
-      url: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=85&w=1600&auto=format&fit=crop",
-      alt: "Billion-year-old granite rock formations illuminated in deep amber sunset",
-      caption: "Golden hour washing over the prehistoric Aravalli granite range in Rajasthan.",
-      location: "Varawal Ridge"
+      title: "Rabari Shepherd Pastoral Heritage",
+      category: "wildlife",
+      url: "/images/ai-rabari-heritage.jpg",
+      alt: "AI generated traditional Rabari shepherd in red turban with granite hills",
+      caption: "The peaceful centuries-old bond between the Rabari pastoralists and the free-roaming leopards.",
+      location: "Sena Settlement, Jawai",
+      badge: "AI Generated · 8K"
     },
     {
       id: "gal-6",
-      title: "The Rabari Pastoral Heritage",
-      category: "wildlife",
-      url: "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?q=85&w=1600&auto=format&fit=crop",
-      alt: "Traditional Rabari shepherd in iconic red turban coexisting in leopard country",
-      caption: "The world-famous spiritual and peaceful coexistence between the Rabari tribe and wild leopards.",
-      location: "Sena Settlement, Jawai"
-    },
-    {
-      id: "gal-7",
-      title: "Striped Hyena & Nocturnal Wildlife",
-      category: "wildlife",
-      url: "https://images.unsplash.com/photo-1534177616072-ef7dc120449d?q=85&w=1600&auto=format&fit=crop",
-      alt: "Native wilderness wildlife traversing rocky Rajasthan scrubland",
-      caption: "Aside from leopards, Jawai is home to striped hyenas, nilgai, desert fox, and jungle cats.",
-      location: "Kothar River Bed"
-    },
-    {
-      id: "gal-8",
-      title: "Morning Jeep Safari Convoy",
-      category: "safari",
-      url: "https://images.unsplash.com/photo-1516426122078-c23e76319801?q=85&w=1600&auto=format&fit=crop",
-      alt: "Customized safari jeep setting out at early dawn into the granite kopjes",
-      caption: "Dawn safari departure to catch leopards soaking up the earliest morning sunlight on cold granite.",
-      location: "Bera Valley"
+      title: "Golden Hour Kopjes Exploration",
+      category: "landscape",
+      url: "/images/ai-hero-leopard.jpg",
+      alt: "Granite hills bathed in vibrant orange and amber sunset glow",
+      caption: "Spectacular golden light illuminating billion-year-old rock formations across Rajasthan's wild frontier.",
+      location: "Varawal Ridge",
+      badge: "AI Generated · 8K"
     }
   ] as SafariImage[]
 };
