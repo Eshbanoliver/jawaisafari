@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Compass, Phone, Sparkles, MessageSquare, ArrowUpRight, MapPin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BUSINESS_INFO } from '../../data/safariData';
@@ -11,7 +12,7 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,19 +21,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
       } else {
         setIsScrolled(false);
       }
-
-      // Track active section for indicator
-      const sections = ['hero', 'about', 'experiences', 'packages', 'gallery', 'contact'];
-      for (const section of sections) {
-        const el = document.getElementById(section);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 200 && rect.bottom >= 200) {
-            setActiveSection(section);
-            break;
-          }
-        }
-      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -40,12 +28,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#hero', id: 'hero' },
-    { name: 'About', href: '#about', id: 'about' },
-    { name: 'Experiences', href: '#experiences', id: 'experiences' },
-    { name: 'Packages', href: '#packages', id: 'packages' },
-    { name: 'Gallery', href: '#gallery', id: 'gallery' },
-    { name: 'Contact', href: '#contact', id: 'contact' },
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Experiences', path: '/experiences' },
+    { name: 'Packages', path: '/packages' },
+    { name: 'Gallery', path: '/gallery' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   return (
@@ -60,8 +48,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
           } flex items-center justify-between h-12 sm:h-14`}
         >
           {/* Brand Logo - Strictly Single-Line & Slim */}
-          <a
-            href="#hero"
+          <Link
+            to="/"
             className="group flex items-center space-x-2 sm:space-x-2.5 focus:outline-none whitespace-nowrap shrink-0"
             aria-label="Jawai Safari Hub Home"
           >
@@ -75,17 +63,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               </span>
               <span className="w-1.5 h-1.5 rounded-full bg-jawai-amber animate-pulse hidden xs:inline" />
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Capsule Nav Links - Single Line Compact */}
           <nav className="hidden lg:flex items-center bg-stone-100/80 p-0.5 rounded-full border border-stone-200/80 mx-2">
             {navLinks.map((link) => {
-              const isActive = activeSection === link.id;
+              const isActive = location.pathname === link.path;
 
               return (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.path}
                   className={`text-[11px] uppercase tracking-[0.12em] font-bold px-3 py-1 rounded-full transition-all duration-200 whitespace-nowrap ${
                     isActive
                       ? 'bg-white text-jawai-amber shadow-xs'
@@ -93,7 +81,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                   }`}
                 >
                   {link.name}
-                </a>
+                </Link>
               );
             })}
           </nav>
@@ -221,9 +209,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                   Expedition Index
                 </span>
                 {navLinks.map((link, idx) => (
-                  <a
+                  <Link
                     key={link.name}
-                    href={link.href}
+                    to={link.path}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="flex items-center justify-between px-3.5 py-2.5 rounded-xl hover:bg-amber-50 text-stone-800 hover:text-jawai-amber transition-colors group"
                   >
@@ -236,7 +224,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                       </span>
                       <ArrowUpRight className="w-3.5 h-3.5 text-stone-300 group-hover:text-jawai-amber transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </div>
-                  </a>
+                  </Link>
                 ))}
               </div>
 

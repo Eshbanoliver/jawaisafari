@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, MapPin, Compass, ArrowUp, MessageSquare, Sparkles } from 'lucide-react';
 import { BUSINESS_INFO } from '../../data/safariData';
 import { getGeneralEnquiryUrl } from '../../utils/whatsapp';
@@ -37,12 +38,12 @@ export const Footer: React.FC = () => {
               Navigation
             </h4>
             <ul className="space-y-2.5 text-xs tracking-wider uppercase font-sans text-stone-400">
-              <li><a href="#hero" className="hover:text-amber-400 transition-colors">Home</a></li>
-              <li><a href="#about" className="hover:text-amber-400 transition-colors">About Jawai</a></li>
-              <li><a href="#experiences" className="hover:text-amber-400 transition-colors">Safari Experiences</a></li>
-              <li><a href="#packages" className="hover:text-amber-400 transition-colors">Safari Packages</a></li>
-              <li><a href="#gallery" className="hover:text-amber-400 transition-colors">Wildlife Gallery</a></li>
-              <li><a href="#contact" className="hover:text-amber-400 transition-colors">Contact & Location</a></li>
+              <li><Link to="/" className="hover:text-amber-400 transition-colors">Home</Link></li>
+              <li><Link to="/about" className="hover:text-amber-400 transition-colors">About Jawai</Link></li>
+              <li><Link to="/experiences" className="hover:text-amber-400 transition-colors">Safari Experiences</Link></li>
+              <li><Link to="/packages" className="hover:text-amber-400 transition-colors">Safari Packages</Link></li>
+              <li><Link to="/gallery" className="hover:text-amber-400 transition-colors">Wildlife Gallery</Link></li>
+              <li><Link to="/contact" className="hover:text-amber-400 transition-colors">Contact & Location</Link></li>
             </ul>
           </div>
 
@@ -51,11 +52,11 @@ export const Footer: React.FC = () => {
               Wild Expeditions
             </h4>
             <ul className="space-y-2.5 text-xs tracking-wider font-sans text-stone-400">
-              <li><a href="#experiences" className="hover:text-amber-400 transition-colors">Leopard Safari</a></li>
-              <li><a href="#experiences" className="hover:text-amber-400 transition-colors">Jawai Jeep Safari</a></li>
-              <li><a href="#experiences" className="hover:text-amber-400 transition-colors">Wildlife & Nature Tour</a></li>
-              <li><a href="#packages" className="hover:text-amber-400 transition-colors">Custom Expeditions</a></li>
-              <li><a href="#destination" className="hover:text-amber-400 transition-colors">Jawai Dam Wetlands</a></li>
+              <li><Link to="/experiences" className="hover:text-amber-400 transition-colors">Leopard Safari</Link></li>
+              <li><Link to="/experiences" className="hover:text-amber-400 transition-colors">Jawai Jeep Safari</Link></li>
+              <li><Link to="/experiences" className="hover:text-amber-400 transition-colors">Wildlife & Nature Tour</Link></li>
+              <li><Link to="/packages" className="hover:text-amber-400 transition-colors">Custom Expeditions</Link></li>
+              <li><Link to="/about" className="hover:text-amber-400 transition-colors">Jawai Dam Wetlands</Link></li>
             </ul>
           </div>
 
