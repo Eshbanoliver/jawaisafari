@@ -113,7 +113,16 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-stone-500 font-sans gap-4">
           <div>
-            © {new Date().getFullYear()} {BUSINESS_INFO.name}. All Rights Reserved. Jawai, Rajasthan, India.
+            ©️ Copyright 2026 | {BUSINESS_INFO.name} | All Rights Reserved | Powered by{' '}
+            <a
+              href="https://www.futurexdigitalmarketing.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#28a745' }}
+              className="hover:underline font-medium"
+            >
+              FutureX Digital Marketing
+            </a>
           </div>
 
           <div className="flex items-center space-x-6">
