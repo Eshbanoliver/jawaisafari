@@ -55,7 +55,7 @@ export function App() {
         <PackagesSection />
 
         {/* Why Choose Us */}
-        <WhyChooseUsSection />
+        <WhyChooseUsSection onOpenBookingModal={() => handleOpenBookingModal()} />
 
         {/* Destination Storytelling */}
         <DestinationSection />
