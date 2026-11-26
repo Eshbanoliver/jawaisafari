@@ -41,11 +41,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
       {/* Slim Floating Island Navigation Container */}
       <header className="fixed top-2.5 sm:top-4 left-0 right-0 z-50 px-3 sm:px-6 pointer-events-none transition-all duration-300">
         <div
-          className={`max-w-5xl mx-auto pointer-events-auto transition-all duration-300 rounded-full ${
+          className={`w-full max-w-6xl mx-auto pointer-events-auto transition-all duration-300 rounded-full ${
             isScrolled
-              ? 'bg-white/95 backdrop-blur-xl border border-stone-200/90 shadow-[0_10px_30px_-8px_rgba(17,24,21,0.12)] py-1.5 px-3 sm:px-5'
+              ? 'bg-white/95 backdrop-blur-xl border border-stone-200/90 shadow-[0_10px_30px_-8px_rgba(17,24,21,0.12)] py-1.5 px-3.5 sm:px-5'
               : 'bg-white/90 backdrop-blur-md border border-stone-200/70 shadow-[0_8px_25px_-8px_rgba(17,24,21,0.08)] py-1.5 sm:py-2 px-3.5 sm:px-5'
-          } flex items-center justify-between h-12 sm:h-14`}
+          } flex items-center justify-between h-12 sm:h-14 gap-2`}
         >
           {/* Brand Logo - Strictly Single-Line & Slim */}
           <Link
@@ -66,7 +66,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
           </Link>
 
           {/* Desktop Capsule Nav Links - Single Line Compact */}
-          <nav className="hidden lg:flex items-center bg-stone-100/80 p-0.5 rounded-full border border-stone-200/80 mx-2">
+          <nav className="hidden lg:flex items-center bg-stone-100/80 p-0.5 rounded-full border border-stone-200/80 mx-1 xl:mx-2 shrink-0">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
 
@@ -74,7 +74,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`text-[11px] uppercase tracking-[0.12em] font-bold px-3 py-1 rounded-full transition-all duration-200 whitespace-nowrap ${
+                  className={`text-[11px] uppercase tracking-[0.12em] font-bold px-2.5 xl:px-3.5 py-1 rounded-full transition-all duration-200 whitespace-nowrap ${
                     isActive
                       ? 'bg-white text-jawai-amber shadow-xs'
                       : 'text-stone-600 hover:text-stone-950 hover:bg-white/60'
@@ -86,28 +86,28 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
             })}
           </nav>
 
-          {/* Action CTAs - Slim Single-Line Height */}
+          {/* Action CTAs - Slim Single-Line Height, Guaranteed to Fit */}
           <div className="hidden sm:flex items-center space-x-2 shrink-0">
             {/* Quick WhatsApp Hotline */}
             <a
               href={getGeneralEnquiryUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-1.5 sm:px-2.5 sm:py-1 rounded-full bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200/70 transition-all flex items-center space-x-1 text-xs font-semibold whitespace-nowrap"
-              title="Chat with Safari Desk"
+              className="p-1.5 lg:px-2.5 lg:py-1 rounded-full bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200/70 transition-all flex items-center space-x-1 text-xs font-semibold whitespace-nowrap"
+              title="Chat on WhatsApp"
             >
               <MessageSquare className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-              <span className="text-[11px] tracking-wide hidden md:inline">WhatsApp</span>
+              <span className="text-[11px] tracking-wide hidden 2xl:inline">WhatsApp</span>
             </a>
 
             {/* Quick Call */}
             <a
               href={`tel:${BUSINESS_INFO.phoneRaw}`}
-              className="p-1.5 sm:px-2.5 sm:py-1 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/70 transition-all flex items-center space-x-1 text-xs font-semibold whitespace-nowrap"
+              className="p-1.5 lg:px-2.5 lg:py-1 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/70 transition-all flex items-center space-x-1 text-xs font-semibold whitespace-nowrap"
               title={`Call ${BUSINESS_INFO.phone}`}
             >
               <Phone className="w-3.5 h-3.5 text-jawai-amber shrink-0" />
-              <span className="text-[11px] tracking-wider font-mono hidden xl:inline">{BUSINESS_INFO.phone}</span>
+              <span className="text-[11px] tracking-wider font-mono hidden 2xl:inline">{BUSINESS_INFO.phone}</span>
             </a>
 
             {/* Book Safari Expedition Button */}
