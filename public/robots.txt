@@ -1,4 +1,31 @@
+# ==============================================================================
+# JAWAI SAFARI HUB - Production Robots Configuration
+# Website: https://jawaisafarihub.com/
+# ==============================================================================
+
 User-agent: *
 Allow: /
+Allow: /about
+Allow: /experiences
+Allow: /packages
+Allow: /gallery
+Allow: /contact
+Allow: /images/
 
+# Prevent crawling of build artifacts or non-crawlable files
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /*.json$
+
+# Googlebot & Bingbot specific directives
+User-agent: Googlebot
+Allow: /
+Allow: /images/
+
+User-agent: Bingbot
+Allow: /
+Allow: /images/
+
+# Sitemap Locations
 Sitemap: https://jawaisafarihub.com/sitemap.xml
+Host: https://jawaisafarihub.com
