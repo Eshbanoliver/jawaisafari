@@ -39,29 +39,29 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
   return (
     <>
       {/* Slim Floating Island Navigation Container */}
-      <header className="fixed top-2.5 sm:top-4 left-0 right-0 z-50 px-3 sm:px-6 pointer-events-none transition-all duration-300">
+      <header className="fixed top-2 sm:top-4 left-0 right-0 z-50 px-2 sm:px-6 pointer-events-none transition-all duration-300">
         <div
           className={`w-full max-w-6xl mx-auto pointer-events-auto transition-all duration-300 rounded-full ${
             isScrolled
-              ? 'bg-white/95 backdrop-blur-xl border border-stone-200/90 shadow-[0_10px_30px_-8px_rgba(17,24,21,0.12)] py-1.5 px-3.5 sm:px-5'
-              : 'bg-white/90 backdrop-blur-md border border-stone-200/70 shadow-[0_8px_25px_-8px_rgba(17,24,21,0.08)] py-1.5 sm:py-2 px-3.5 sm:px-5'
-          } flex items-center justify-between h-12 sm:h-14 gap-2`}
+              ? 'bg-white/95 backdrop-blur-xl border border-stone-200/90 shadow-[0_10px_30px_-8px_rgba(17,24,21,0.12)] py-1.5 px-3 sm:px-5'
+              : 'bg-white/90 backdrop-blur-md border border-stone-200/70 shadow-[0_8px_25px_-8px_rgba(17,24,21,0.08)] py-1.5 sm:py-2 px-3 sm:px-5'
+          } flex items-center justify-between h-12 sm:h-14 gap-1.5 sm:gap-2`}
         >
           {/* Brand Logo - Strictly Single-Line & Slim */}
           <Link
             to="/"
-            className="group flex items-center space-x-2 sm:space-x-2.5 focus:outline-none whitespace-nowrap shrink-0"
+            className="group flex items-center space-x-1.5 sm:space-x-2.5 focus:outline-none whitespace-nowrap shrink-0 min-w-0"
             aria-label="Jawai Safari Hub Home"
           >
             <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-stone-900 via-stone-800 to-amber-950 text-amber-300 border border-amber-400/40 flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform shrink-0">
               <Compass className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-300 group-hover:rotate-45 transition-transform duration-500" />
             </div>
 
-            <div className="flex items-center space-x-1.5">
-              <span className="font-serif text-base sm:text-lg font-bold tracking-wider text-jawai-text group-hover:text-jawai-amber transition-colors leading-none">
+            <div className="flex items-center space-x-1.5 truncate">
+              <span className="font-serif text-sm xs:text-base sm:text-lg font-bold tracking-tight xs:tracking-wider text-jawai-text group-hover:text-jawai-amber transition-colors leading-none truncate">
                 JAWAI SAFARI HUB
               </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-jawai-amber animate-pulse hidden xs:inline" />
+              <span className="w-1.5 h-1.5 rounded-full bg-jawai-amber animate-pulse hidden md:inline shrink-0" />
             </div>
           </Link>
 
@@ -176,7 +176,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBookingModal }) => {
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 26, stiffness: 220 }}
               onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-sm bg-white h-full shadow-2xl flex flex-col justify-between p-6 sm:p-8 overflow-y-auto"
+              className="w-full max-w-[85vw] sm:max-w-sm bg-white h-full shadow-2xl flex flex-col justify-between p-5 sm:p-7 overflow-y-auto"
             >
               {/* Drawer Top Header */}
               <div className="flex items-center justify-between border-b border-stone-200 pb-4">

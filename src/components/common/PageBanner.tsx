@@ -19,7 +19,7 @@ export const PageBanner: React.FC<PageBannerProps> = ({
   breadcrumb,
 }) => {
   return (
-    <div className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 bg-stone-900 text-white overflow-hidden">
+    <div className="relative pt-24 pb-14 sm:pt-36 sm:pb-24 bg-stone-900 text-white overflow-hidden">
       {/* Background Image with Cinematic Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -31,12 +31,12 @@ export const PageBanner: React.FC<PageBannerProps> = ({
         <div className="absolute inset-0 bg-amber-500/10 mix-blend-overlay" />
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 md:px-12 relative z-10 text-center flex flex-col items-center">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-12 relative z-10 text-center flex flex-col items-center">
         {/* Breadcrumb Navigation */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="inline-flex items-center space-x-2 text-xs font-sans text-stone-300 mb-4 bg-black/40 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/15"
+          className="inline-flex items-center space-x-2 text-xs font-sans text-stone-300 mb-3 sm:mb-4 bg-black/40 backdrop-blur-md px-3 sm:px-3.5 py-1.5 rounded-full border border-white/15"
         >
           <Link to="/" className="hover:text-amber-300 transition-colors">
             Home
@@ -50,10 +50,10 @@ export const PageBanner: React.FC<PageBannerProps> = ({
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="inline-flex items-center space-x-2 px-3 py-1 bg-amber-500/20 rounded-md backdrop-blur-sm mb-3 border border-amber-300/30"
+          className="inline-flex items-center space-x-2 px-3 py-1 bg-amber-500/20 rounded-md backdrop-blur-sm mb-2.5 sm:mb-3 border border-amber-300/30"
         >
           <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-          <span className="text-[11px] font-sans uppercase tracking-[0.25em] text-amber-200 font-bold">
+          <span className="text-[10px] sm:text-[11px] font-sans uppercase tracking-[0.22em] sm:tracking-[0.25em] text-amber-200 font-bold">
             {eyebrow}
           </span>
         </motion.div>
@@ -63,7 +63,7 @@ export const PageBanner: React.FC<PageBannerProps> = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="font-serif text-4xl sm:text-5xl md:text-6xl text-white font-normal leading-[1.12] max-w-4xl"
+          className="font-serif text-3xl sm:text-5xl md:text-6xl text-white font-normal leading-[1.14] max-w-4xl"
         >
           {title}
         </motion.h1>
@@ -73,7 +73,7 @@ export const PageBanner: React.FC<PageBannerProps> = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="mt-4 max-w-2xl text-sm sm:text-base text-stone-200 font-sans font-normal leading-relaxed"
+          className="mt-3 sm:mt-4 max-w-2xl text-xs sm:text-sm md:text-base text-stone-200 font-sans font-normal leading-relaxed"
         >
           {subtitle}
         </motion.p>
@@ -83,7 +83,7 @@ export const PageBanner: React.FC<PageBannerProps> = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="mt-6 flex items-center space-x-2 text-[11px] font-sans text-amber-300/90 tracking-widest uppercase font-semibold"
+          className="mt-5 sm:mt-6 flex items-center space-x-1.5 sm:space-x-2 text-[10px] sm:text-[11px] font-sans text-amber-300/90 tracking-widest uppercase font-semibold"
         >
           <MapPin className="w-3.5 h-3.5 text-amber-400" />
           <span>Jawai · Pali District · Rajasthan · India</span>

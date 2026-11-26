@@ -117,21 +117,21 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       </div>
 
       {/* Atmospheric Content Layer */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12 text-center flex flex-col items-center pt-24 pb-20">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 md:px-12 text-center flex flex-col items-center pt-24 sm:pt-28 pb-16 sm:pb-20">
         {/* Subtle vibrant location & AI badge */}
         <motion.div
           initial={{ opacity: 0, y: -15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="inline-flex items-center space-x-2.5 mb-5 px-3.5 py-1.5 rounded-full bg-white/95 border border-amber-300/80 shadow-lg backdrop-blur-md"
+          className="inline-flex items-center space-x-2 sm:space-x-2.5 mb-4 sm:mb-5 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-white/95 border border-amber-300/80 shadow-lg backdrop-blur-md"
         >
-          <div className="w-4 h-4 rounded-full bg-gradient-to-r from-jawai-amber to-jawai-gold flex items-center justify-center text-white">
+          <div className="w-4 h-4 rounded-full bg-gradient-to-r from-jawai-amber to-jawai-gold flex items-center justify-center text-white shrink-0">
             <MapPin className="w-2.5 h-2.5" />
           </div>
-          <span className="text-[10px] font-sans font-bold tracking-[0.25em] text-jawai-text uppercase">
+          <span className="text-[9px] sm:text-[10px] font-sans font-bold tracking-[0.2em] sm:tracking-[0.25em] text-jawai-text uppercase">
             JAWAI · RAJASTHAN · INDIA
           </span>
-          <span className="w-1.5 h-1.5 rounded-full bg-jawai-amber" />
+          <span className="w-1.5 h-1.5 rounded-full bg-jawai-amber hidden xs:inline" />
           <span className="text-[10px] font-semibold tracking-wider text-jawai-amber uppercase hidden sm:inline">
             Free-Roaming Leopards
           </span>
@@ -142,10 +142,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="inline-flex items-center space-x-2 px-3 py-1 bg-amber-500/20 rounded-md backdrop-blur-sm mb-4 border border-amber-300/40"
+          className="inline-flex items-center space-x-1.5 sm:space-x-2 px-2.5 sm:px-3 py-1 bg-amber-500/20 rounded-md backdrop-blur-sm mb-3 sm:mb-4 border border-amber-300/40"
         >
-          <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-          <span className="text-xs font-sans uppercase tracking-[0.3em] text-amber-100 font-bold">
+          <Sparkles className="w-3.5 h-3.5 text-amber-300 shrink-0" />
+          <span className="text-[10px] sm:text-xs font-sans uppercase tracking-[0.22em] sm:tracking-[0.3em] text-amber-100 font-bold">
             THE WILD SIDE OF RAJASTHAN
           </span>
         </motion.div>
@@ -155,7 +155,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-normal leading-[1.08] tracking-tight max-w-5xl drop-shadow-md"
+          className="font-serif text-3xl xs:text-4xl sm:text-6xl md:text-7xl lg:text-8xl text-white font-normal leading-[1.12] tracking-tight max-w-5xl drop-shadow-md px-1"
         >
           "Where The Wild <br />
           <span className="italic font-light text-amber-300">Meets The Untamed."</span>
@@ -166,7 +166,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-5 md:mt-7 max-w-2xl text-sm md:text-base text-stone-100 font-sans font-normal leading-relaxed drop-shadow"
+          className="mt-4 sm:mt-6 md:mt-7 max-w-2xl text-xs sm:text-sm md:text-base text-stone-100 font-sans font-normal leading-relaxed drop-shadow px-2"
         >
           {BUSINESS_INFO.description}
         </motion.p>
@@ -176,18 +176,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full sm:w-auto"
+          className="mt-6 sm:mt-8 md:mt-10 flex flex-col sm:flex-row items-center gap-3 sm:gap-6 w-full sm:w-auto px-4 sm:px-0"
         >
           <button
             onClick={onExploreSafaris}
-            className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-jawai-amber via-jawai-amber-vibrant to-jawai-gold hover:from-jawai-amber-vibrant hover:to-jawai-amber text-white font-sans text-xs font-bold uppercase tracking-[0.22em] transition-all duration-300 shadow-vibrant-glow hover:-translate-y-1 active:translate-y-0 rounded-full flex items-center justify-center space-x-2"
+            className="w-full sm:w-auto px-7 sm:px-8 py-3 sm:py-3.5 bg-gradient-to-r from-jawai-amber via-jawai-amber-vibrant to-jawai-gold hover:from-jawai-amber-vibrant hover:to-jawai-amber text-white font-sans text-xs font-bold uppercase tracking-[0.2em] sm:tracking-[0.22em] transition-all duration-300 shadow-vibrant-glow hover:-translate-y-1 active:translate-y-0 rounded-full flex items-center justify-center space-x-2"
           >
             <span>EXPLORE SAFARIS</span>
           </button>
 
           <button
             onClick={onDiscoverJawai}
-            className="w-full sm:w-auto px-8 py-3.5 bg-white/95 hover:bg-white text-jawai-text border border-amber-300/60 font-sans text-xs font-bold uppercase tracking-[0.22em] transition-all duration-300 shadow-lg hover:-translate-y-1 active:translate-y-0 rounded-full flex items-center justify-center space-x-2 hover:text-jawai-amber"
+            className="w-full sm:w-auto px-7 sm:px-8 py-3 sm:py-3.5 bg-white/95 hover:bg-white text-jawai-text border border-amber-300/60 font-sans text-xs font-bold uppercase tracking-[0.2em] sm:tracking-[0.22em] transition-all duration-300 shadow-lg hover:-translate-y-1 active:translate-y-0 rounded-full flex items-center justify-center space-x-2 hover:text-jawai-amber"
           >
             <Compass className="w-4 h-4 text-jawai-amber" />
             <span>DISCOVER JAWAI</span>
@@ -200,12 +200,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mt-7 inline-flex items-center space-x-2.5 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white/90 text-xs font-sans"
+          className="mt-6 sm:mt-7 inline-flex items-center space-x-2 px-3 sm:px-4 py-1.5 rounded-full bg-black/50 backdrop-blur-md border border-white/20 text-white/90 text-[11px] sm:text-xs font-sans max-w-[92vw]"
         >
-          <Eye className="w-3.5 h-3.5 text-amber-300" />
-          <span className="font-semibold text-amber-300">{HERO_SLIDES[currentSlide].title}</span>
+          <Eye className="w-3.5 h-3.5 text-amber-300 shrink-0" />
+          <span className="font-semibold text-amber-300 truncate">{HERO_SLIDES[currentSlide].title}</span>
           <span className="text-white/40">·</span>
-          <span className="text-[11px] text-white/70">{HERO_SLIDES[currentSlide].location}</span>
+          <span className="text-[10px] sm:text-[11px] text-white/70 truncate">{HERO_SLIDES[currentSlide].location}</span>
         </motion.div>
 
         {/* Highlights Bar with Professional Icon Badges */}
@@ -213,35 +213,35 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.2 }}
-          className="mt-8 pt-6 border-t border-white/20 grid grid-cols-1 sm:grid-cols-3 gap-3.5 max-w-3xl w-full"
+          className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-white/20 grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3.5 max-w-3xl w-full"
         >
-          <div className="bg-white/90 backdrop-blur-md p-3.5 rounded-xl shadow-md border border-stone-200/60 flex items-center space-x-3 text-left">
-            <div className="w-9 h-9 rounded-lg bg-amber-100 flex items-center justify-center text-jawai-amber shrink-0">
+          <div className="bg-white/95 backdrop-blur-md p-3 sm:p-3.5 rounded-xl shadow-md border border-stone-200/60 flex items-center space-x-3 text-left">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-amber-100 flex items-center justify-center text-jawai-amber shrink-0">
               <Camera className="w-4 h-4" />
             </div>
             <div>
               <span className="text-[9px] uppercase tracking-wider text-jawai-amber font-bold block">Wild Habitat</span>
-              <span className="font-serif text-sm font-semibold text-jawai-text">Granite Kopjes & Hills</span>
+              <span className="font-serif text-xs sm:text-sm font-semibold text-jawai-text">Granite Kopjes & Hills</span>
             </div>
           </div>
 
-          <div className="bg-white/90 backdrop-blur-md p-3.5 rounded-xl shadow-md border border-stone-200/60 flex items-center space-x-3 text-left">
-            <div className="w-9 h-9 rounded-lg bg-emerald-100 flex items-center justify-center text-jawai-emerald shrink-0">
+          <div className="bg-white/95 backdrop-blur-md p-3 sm:p-3.5 rounded-xl shadow-md border border-stone-200/60 flex items-center space-x-3 text-left">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-emerald-100 flex items-center justify-center text-jawai-emerald shrink-0">
               <Shield className="w-4 h-4" />
             </div>
             <div>
               <span className="text-[9px] uppercase tracking-wider text-jawai-emerald font-bold block">Apex Predator</span>
-              <span className="font-serif text-sm font-semibold text-jawai-text">Indian Leopards</span>
+              <span className="font-serif text-xs sm:text-sm font-semibold text-jawai-text">Indian Leopards</span>
             </div>
           </div>
 
-          <div className="bg-white/90 backdrop-blur-md p-3.5 rounded-xl shadow-md border border-stone-200/60 flex items-center space-x-3 text-left">
-            <div className="w-9 h-9 rounded-lg bg-orange-100 flex items-center justify-center text-jawai-terracotta shrink-0">
+          <div className="bg-white/95 backdrop-blur-md p-3 sm:p-3.5 rounded-xl shadow-md border border-stone-200/60 flex items-center space-x-3 text-left">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-orange-100 flex items-center justify-center text-jawai-terracotta shrink-0">
               <Compass className="w-4 h-4" />
             </div>
             <div>
               <span className="text-[9px] uppercase tracking-wider text-jawai-terracotta font-bold block">Vehicle Type</span>
-              <span className="font-serif text-sm font-semibold text-jawai-text">Open 4x4 Gypsies</span>
+              <span className="font-serif text-xs sm:text-sm font-semibold text-jawai-text">Open 4x4 Gypsies</span>
             </div>
           </div>
         </motion.div>
@@ -251,18 +251,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       <button
         onClick={prevSlide}
         aria-label="Previous image slide"
-        className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/35 hover:bg-black/60 text-white backdrop-blur-md border border-white/25 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg group"
+        className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-black/60 text-white backdrop-blur-md border border-white/25 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg group"
       >
-        <ChevronLeft className="w-5 h-5 text-white/90 group-hover:text-amber-300" />
+        <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 text-white/90 group-hover:text-amber-300" />
       </button>
 
       {/* Slider Right Arrow */}
       <button
         onClick={nextSlide}
         aria-label="Next image slide"
-        className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/35 hover:bg-black/60 text-white backdrop-blur-md border border-white/25 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg group"
+        className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-11 sm:h-11 rounded-full bg-black/40 hover:bg-black/60 text-white backdrop-blur-md border border-white/25 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 shadow-lg group"
       >
-        <ChevronRight className="w-5 h-5 text-white/90 group-hover:text-amber-300" />
+        <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-white/90 group-hover:text-amber-300" />
       </button>
 
       {/* Slider Progress & Navigation Dots */}

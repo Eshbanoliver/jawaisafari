@@ -55,16 +55,16 @@ export const BookingModal: React.FC<BookingModalProps> = ({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.3 }}
-            className="relative w-full max-w-xl bg-white rounded-2xl border border-stone-200 shadow-2xl overflow-hidden z-10 my-8"
+            className="relative w-full max-w-xl bg-white rounded-3xl border border-stone-200 shadow-2xl overflow-hidden z-10 my-3 sm:my-8 max-h-[92vh] flex flex-col"
           >
             {/* Header */}
-            <div className="bg-gradient-to-r from-amber-50 to-orange-50 p-6 border-b border-stone-200 flex items-start justify-between">
+            <div className="bg-gradient-to-r from-amber-50 to-orange-50 p-4 sm:p-6 border-b border-stone-200 flex items-start justify-between shrink-0">
               <div>
                 <div className="inline-flex items-center space-x-1.5 text-[10px] uppercase tracking-[0.25em] text-jawai-amber font-bold">
                   <Sparkles className="w-3.5 h-3.5" />
                   <span>Reserve Your Expedition</span>
                 </div>
-                <h3 className="font-serif text-2xl md:text-3xl text-jawai-text font-bold mt-0.5">
+                <h3 className="font-serif text-xl sm:text-2xl md:text-3xl text-jawai-text font-bold mt-0.5">
                   Book Your Jawai Safari
                 </h3>
                 <p className="text-xs text-stone-500 mt-1 font-sans font-medium">
@@ -82,8 +82,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({
             </div>
 
             {/* Form */}
-            <form onSubmit={handleSubmit} className="p-6 md:p-8 space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <form onSubmit={handleSubmit} className="p-4 sm:p-6 md:p-8 space-y-3.5 sm:space-y-4 overflow-y-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-4">
                 {/* Full Name */}
                 <div>
                   <label className="block text-[11px] uppercase tracking-wider text-stone-700 font-bold mb-1.5">
@@ -97,7 +97,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                       placeholder="e.g. Vikramaditya Rathore"
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                      className="w-full pl-9 pr-3 py-2.5 bg-stone-50 border border-stone-300 rounded-xl text-jawai-text text-xs focus:outline-none focus:border-jawai-amber focus:ring-2 focus:ring-amber-200 transition-all font-sans font-medium"
+                      className="w-full pl-9 pr-3 py-2.5 bg-stone-50 border border-stone-300 rounded-xl text-jawai-text text-base sm:text-xs focus:outline-none focus:border-jawai-amber focus:ring-2 focus:ring-amber-200 transition-all font-sans font-medium"
                     />
                   </div>
                 </div>
@@ -115,13 +115,13 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                       placeholder="+91 98765 43210"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full pl-9 pr-3 py-2.5 bg-stone-50 border border-stone-300 rounded-xl text-jawai-text text-xs focus:outline-none focus:border-jawai-amber focus:ring-2 focus:ring-amber-200 transition-all font-sans font-medium"
+                      className="w-full pl-9 pr-3 py-2.5 bg-stone-50 border border-stone-300 rounded-xl text-jawai-text text-base sm:text-xs focus:outline-none focus:border-jawai-amber focus:ring-2 focus:ring-amber-200 transition-all font-sans font-medium"
                     />
                   </div>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 sm:gap-4">
                 {/* Preferred Safari */}
                 <div>
                   <label className="block text-[11px] uppercase tracking-wider text-stone-700 font-bold mb-1.5">
@@ -132,7 +132,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                     <select
                       value={formData.preferredSafari}
                       onChange={(e) => setFormData({ ...formData, preferredSafari: e.target.value })}
-                      className="w-full pl-9 pr-3 py-2.5 bg-stone-50 border border-stone-300 rounded-xl text-jawai-text text-xs focus:outline-none focus:border-jawai-amber focus:ring-2 focus:ring-amber-200 transition-all font-sans font-medium"
+                      className="w-full pl-9 pr-3 py-2.5 bg-stone-50 border border-stone-300 rounded-xl text-jawai-text text-base sm:text-xs focus:outline-none focus:border-jawai-amber focus:ring-2 focus:ring-amber-200 transition-all font-sans font-medium"
                     >
                       {EXPERIENCES.map((exp) => (
                         <option key={exp.id} value={exp.title}>
@@ -157,7 +157,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                     <select
                       value={formData.numberOfGuests}
                       onChange={(e) => setFormData({ ...formData, numberOfGuests: e.target.value })}
-                      className="w-full pl-9 pr-3 py-2.5 bg-stone-50 border border-stone-300 rounded-xl text-jawai-text text-xs focus:outline-none focus:border-jawai-amber focus:ring-2 focus:ring-amber-200 transition-all font-sans font-medium"
+                      className="w-full pl-9 pr-3 py-2.5 bg-stone-50 border border-stone-300 rounded-xl text-jawai-text text-base sm:text-xs focus:outline-none focus:border-jawai-amber focus:ring-2 focus:ring-amber-200 transition-all font-sans font-medium"
                     >
                       <option value="1 Guest">1 Guest (Solo Traveler)</option>
                       <option value="2 Guests">2 Guests (Couple / Pair)</option>
@@ -180,7 +180,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                     type="date"
                     value={formData.preferredDate}
                     onChange={(e) => setFormData({ ...formData, preferredDate: e.target.value })}
-                    className="w-full pl-9 pr-3 py-2.5 bg-stone-50 border border-stone-300 rounded-xl text-jawai-text text-xs focus:outline-none focus:border-jawai-amber focus:ring-2 focus:ring-amber-200 transition-all font-sans font-medium"
+                    className="w-full pl-9 pr-3 py-2.5 bg-stone-50 border border-stone-300 rounded-xl text-jawai-text text-base sm:text-xs focus:outline-none focus:border-jawai-amber focus:ring-2 focus:ring-amber-200 transition-all font-sans font-medium"
                   />
                 </div>
               </div>
@@ -195,7 +195,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   placeholder="e.g. Morning drive preferred, wildlife photography gear assistance, pick-up from nearby resort..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-jawai-text text-xs focus:outline-none focus:border-jawai-amber focus:ring-2 focus:ring-amber-200 transition-all font-sans resize-none font-medium"
+                  className="w-full p-3 bg-stone-50 border border-stone-300 rounded-xl text-jawai-text text-base sm:text-xs focus:outline-none focus:border-jawai-amber focus:ring-2 focus:ring-amber-200 transition-all font-sans resize-none font-medium"
                 />
               </div>
 

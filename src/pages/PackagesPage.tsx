@@ -46,8 +46,8 @@ export const PackagesPage: React.FC<PackagesPageProps> = ({ onOpenBookingModal }
       />
 
       {/* Main Packages Grid */}
-      <section className="py-20 md:py-28 max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+      <section className="py-14 sm:py-20 md:py-28 max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           {PACKAGES.map((pkg: PackageItem) => (
             <div
               key={pkg.id}
@@ -80,7 +80,7 @@ export const PackagesPage: React.FC<PackagesPageProps> = ({ onOpenBookingModal }
               </div>
 
               {/* Body Content */}
-              <div className="p-8 flex-1 flex flex-col justify-between space-y-6">
+              <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-5 sm:space-y-6">
                 <div className="space-y-4">
                   <h2 className="font-serif text-2xl md:text-3xl text-jawai-text font-normal tracking-wide">
                     {pkg.name}
@@ -95,7 +95,7 @@ export const PackagesPage: React.FC<PackagesPageProps> = ({ onOpenBookingModal }
                   </p>
 
                   {/* Metadata Specs */}
-                  <div className="pt-2 space-y-2 text-xs text-stone-700 font-sans border-y border-stone-200 py-3 bg-stone-50/60 -mx-8 px-8">
+                  <div className="pt-2 space-y-2 text-xs text-stone-700 font-sans border-y border-stone-200 py-3 bg-stone-50/60 -mx-6 px-6 sm:-mx-8 sm:px-8">
                     <div className="flex items-center space-x-2.5">
                       <div className="w-5 h-5 rounded-full bg-amber-100 flex items-center justify-center text-jawai-amber shrink-0">
                         <Clock className="w-3 h-3" />

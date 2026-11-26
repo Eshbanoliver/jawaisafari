@@ -21,33 +21,33 @@ export const GallerySection: React.FC = () => {
     : IMAGES.gallery.filter((img: SafariImage) => img.category === activeCategory);
 
   return (
-    <section id="gallery" className="py-24 md:py-36 bg-white text-jawai-text relative border-b border-stone-200/60">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section id="gallery" className="py-16 sm:py-24 md:py-36 bg-white text-jawai-text relative border-b border-stone-200/60">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-stone-200 pb-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 border-b border-stone-200 pb-6 sm:pb-8">
           <div>
             <div className="inline-flex items-center space-x-2 px-3 py-1 bg-amber-100 rounded-full text-jawai-amber text-xs font-bold uppercase tracking-wider mb-3">
               <Sparkles className="w-3.5 h-3.5" />
               <span>MOMENTS IN THE WILD</span>
             </div>
-            <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-jawai-text font-normal">
+            <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-jawai-text font-normal">
               Immersive Wildlife <br />
               <span className="text-jawai-amber italic">Gallery.</span>
             </h2>
           </div>
 
-          <p className="mt-4 md:mt-0 max-w-md text-sm text-stone-600 font-sans leading-relaxed">
+          <p className="mt-4 md:mt-0 max-w-md text-xs sm:text-sm text-stone-600 font-sans leading-relaxed">
             Capturing the raw majesty of Indian leopards, rugged granite kopjes, and peaceful Rabari traditions through photorealistic 8K AI expedition visuals.
           </p>
         </div>
 
         {/* Filter Pills with Vibrant Accents */}
-        <div className="flex flex-wrap items-center gap-3 mb-12">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-8 sm:mb-12">
           {categories.map((cat) => (
             <button
               key={cat.value}
               onClick={() => setActiveCategory(cat.value)}
-              className={`px-5 py-2.5 font-sans text-xs uppercase tracking-wider font-semibold transition-all duration-300 rounded-full ${
+              className={`px-3.5 sm:px-5 py-2 sm:py-2.5 font-sans text-[11px] sm:text-xs uppercase tracking-wider font-semibold transition-all duration-300 rounded-full ${
                 activeCategory === cat.value
                   ? 'bg-gradient-to-r from-jawai-amber to-jawai-terracotta text-white shadow-vibrant-glow scale-105'
                   : 'bg-stone-100 border border-stone-200 text-stone-700 hover:bg-stone-200/80 hover:text-stone-900'
@@ -59,7 +59,7 @@ export const GallerySection: React.FC = () => {
         </div>
 
         {/* Asymmetrical Editorial Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {filteredImages.map((image: SafariImage, idx: number) => {
             const isWide = idx === 0 || idx === 3;
 
@@ -72,7 +72,7 @@ export const GallerySection: React.FC = () => {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4 }}
                 className={`relative group cursor-pointer overflow-hidden bg-stone-100 rounded-2xl border border-stone-200 shadow-md hover:shadow-xl ${
-                  isWide ? 'sm:col-span-2 lg:col-span-2 h-[380px] sm:h-[450px]' : 'h-[380px] sm:h-[450px]'
+                  isWide ? 'sm:col-span-2 lg:col-span-2 h-[320px] sm:h-[450px]' : 'h-[320px] sm:h-[450px]'
                 }`}
                 onClick={() => setLightboxIndex(idx)}
               >

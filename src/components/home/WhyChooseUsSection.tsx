@@ -113,7 +113,7 @@ export const WhyChooseUsSection: React.FC<WhyChooseUsProps> = ({ onOpenBookingMo
   return (
     <section
       id="difference"
-      className="py-24 md:py-36 bg-gradient-to-b from-stone-50 via-white to-stone-50 text-jawai-text relative overflow-hidden border-b border-stone-200/80"
+      className="py-16 sm:py-24 md:py-36 bg-gradient-to-b from-stone-50 via-white to-stone-50 text-jawai-text relative overflow-hidden border-b border-stone-200/80"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
@@ -121,63 +121,63 @@ export const WhyChooseUsSection: React.FC<WhyChooseUsProps> = ({ onOpenBookingMo
       <div className="absolute top-1/4 -left-48 w-96 h-96 bg-amber-200/40 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-emerald-200/30 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16 space-y-3 sm:space-y-4">
           <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 bg-amber-100/80 border border-amber-300/80 rounded-full text-jawai-amber text-xs font-bold uppercase tracking-wider shadow-xs">
             <Sparkles className="w-3.5 h-3.5" />
             <span>THE JAWAI SAFARI HUB DIFFERENCE</span>
           </div>
 
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-jawai-text font-normal leading-[1.12]">
+          <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-jawai-text font-normal leading-[1.14]">
             "Not Just A Safari. <br />
             <span className="text-jawai-amber italic">A Story Worth Remembering."</span>
           </h2>
 
-          <p className="text-sm md:text-base text-stone-600 font-sans font-normal leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-base text-stone-600 font-sans font-normal leading-relaxed">
             Our expedition philosophy is rooted in native generational tracking, ethical animal reverence, and handcrafted wilderness experiences across Rajasthan's granite belt.
           </p>
         </div>
 
         {/* Dynamic Metric Counter Strip */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-          <div className="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm hover:border-amber-300 hover:shadow-md transition-all flex items-center space-x-3.5">
-            <div className="w-11 h-11 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600 shrink-0">
-              <Mountain className="w-5 h-5" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-4 mb-10 sm:mb-16">
+          <div className="bg-white p-3.5 sm:p-5 rounded-2xl border border-stone-200 shadow-sm hover:border-amber-300 hover:shadow-md transition-all flex items-center space-x-2.5 sm:space-x-3.5">
+            <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600 shrink-0">
+              <Mountain className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
             <div>
-              <span className="font-serif text-2xl font-bold text-jawai-text block leading-none">850M+ Yrs</span>
-              <span className="text-[10px] uppercase font-bold tracking-wider text-stone-400 mt-1 block">Granite Monoliths</span>
+              <span className="font-serif text-lg sm:text-2xl font-bold text-jawai-text block leading-none">850M+ Yrs</span>
+              <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider text-stone-400 mt-1 block">Granite Monoliths</span>
             </div>
           </div>
 
-          <div className="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm hover:border-emerald-300 hover:shadow-md transition-all flex items-center space-x-3.5">
-            <div className="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 shrink-0">
-              <ShieldCheck className="w-5 h-5" />
+          <div className="bg-white p-3.5 sm:p-5 rounded-2xl border border-stone-200 shadow-sm hover:border-emerald-300 hover:shadow-md transition-all flex items-center space-x-2.5 sm:space-x-3.5">
+            <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 shrink-0">
+              <ShieldCheck className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
             <div>
-              <span className="font-serif text-2xl font-bold text-jawai-text block leading-none">100% Free</span>
-              <span className="text-[10px] uppercase font-bold tracking-wider text-stone-400 mt-1 block">Zero Enclosures</span>
+              <span className="font-serif text-lg sm:text-2xl font-bold text-jawai-text block leading-none">100% Free</span>
+              <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider text-stone-400 mt-1 block">Zero Enclosures</span>
             </div>
           </div>
 
-          <div className="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm hover:border-orange-300 hover:shadow-md transition-all flex items-center space-x-3.5">
-            <div className="w-11 h-11 rounded-xl bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600 shrink-0">
-              <Clock className="w-5 h-5" />
+          <div className="bg-white p-3.5 sm:p-5 rounded-2xl border border-stone-200 shadow-sm hover:border-orange-300 hover:shadow-md transition-all flex items-center space-x-2.5 sm:space-x-3.5">
+            <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600 shrink-0">
+              <Clock className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
             <div>
-              <span className="font-serif text-2xl font-bold text-jawai-text block leading-none">3 - 4 Hrs</span>
-              <span className="text-[10px] uppercase font-bold tracking-wider text-stone-400 mt-1 block">Dedicated Drives</span>
+              <span className="font-serif text-lg sm:text-2xl font-bold text-jawai-text block leading-none">3 - 4 Hrs</span>
+              <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider text-stone-400 mt-1 block">Dedicated Drives</span>
             </div>
           </div>
 
-          <div className="bg-white p-5 rounded-2xl border border-stone-200 shadow-sm hover:border-teal-300 hover:shadow-md transition-all flex items-center space-x-3.5">
-            <div className="w-11 h-11 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-600 shrink-0">
-              <Camera className="w-5 h-5" />
+          <div className="bg-white p-3.5 sm:p-5 rounded-2xl border border-stone-200 shadow-sm hover:border-teal-300 hover:shadow-md transition-all flex items-center space-x-2.5 sm:space-x-3.5">
+            <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-600 shrink-0">
+              <Camera className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
             <div>
-              <span className="font-serif text-2xl font-bold text-jawai-text block leading-none">Open 4x4</span>
-              <span className="text-[10px] uppercase font-bold tracking-wider text-stone-400 mt-1 block">Custom Gypsies</span>
+              <span className="font-serif text-lg sm:text-2xl font-bold text-jawai-text block leading-none">Open 4x4</span>
+              <span className="text-[9px] sm:text-[10px] uppercase font-bold tracking-wider text-stone-400 mt-1 block">Custom Gypsies</span>
             </div>
           </div>
         </div>
@@ -267,7 +267,7 @@ export const WhyChooseUsSection: React.FC<WhyChooseUsProps> = ({ onOpenBookingMo
                 className="bg-white rounded-3xl border border-stone-200/90 shadow-2xl overflow-hidden"
               >
                 {/* Visual Header with Overlay Chips */}
-                <div className="relative h-64 sm:h-80 overflow-hidden bg-stone-900">
+                <div className="relative h-56 sm:h-80 overflow-hidden bg-stone-900">
                   <img
                     src={currentItem.image}
                     alt={currentItem.title}
@@ -276,34 +276,34 @@ export const WhyChooseUsSection: React.FC<WhyChooseUsProps> = ({ onOpenBookingMo
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none" />
 
                   {/* Top Left Badge */}
-                  <div className="absolute top-4 left-4 z-10">
-                    <span className={`px-3.5 py-1.5 rounded-full font-sans text-[10px] font-bold uppercase tracking-wider border shadow-md ${currentItem.tagColor}`}>
+                  <div className="absolute top-3.5 left-3.5 sm:top-4 sm:left-4 z-10">
+                    <span className={`px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full font-sans text-[10px] font-bold uppercase tracking-wider border shadow-md ${currentItem.tagColor}`}>
                       {currentItem.badge}
                     </span>
                   </div>
 
                   {/* Top Right Stat Pill */}
-                  <div className="absolute top-4 right-4 z-10 bg-black/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20 text-white flex items-center space-x-1.5">
+                  <div className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 z-10 bg-black/60 backdrop-blur-md px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full border border-white/20 text-white flex items-center space-x-1.5">
                     <Award className="w-3.5 h-3.5 text-amber-300" />
-                    <span className="text-[11px] font-bold tracking-wider">{currentItem.statNumber}</span>
+                    <span className="text-[10px] sm:text-[11px] font-bold tracking-wider">{currentItem.statNumber}</span>
                   </div>
 
                   {/* Bottom Text Over Image */}
-                  <div className="absolute bottom-4 left-6 right-6 z-10 text-white">
-                    <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-amber-300 block mb-1">
+                  <div className="absolute bottom-3 left-4 right-4 sm:bottom-4 sm:left-6 sm:right-6 z-10 text-white">
+                    <span className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] font-bold text-amber-300 block mb-0.5 sm:mb-1">
                       Pillar 0{activeTab + 1} of 05
                     </span>
-                    <h3 className="font-serif text-2xl sm:text-3xl font-bold leading-tight drop-shadow-sm">
+                    <h3 className="font-serif text-xl sm:text-3xl font-bold leading-tight drop-shadow-sm">
                       {currentItem.title}
                     </h3>
                   </div>
                 </div>
 
                 {/* Body Content */}
-                <div className="p-6 sm:p-8 space-y-6">
+                <div className="p-4 sm:p-8 space-y-4 sm:space-y-6">
                   {/* Quote */}
-                  <div className="p-4 bg-amber-50/70 border-l-4 border-jawai-amber rounded-r-xl">
-                    <p className="font-serif italic text-base sm:text-lg text-amber-950 leading-relaxed">
+                  <div className="p-3.5 sm:p-4 bg-amber-50/70 border-l-4 border-jawai-amber rounded-r-xl">
+                    <p className="font-serif italic text-sm sm:text-base md:text-lg text-amber-950 leading-relaxed">
                       {currentItem.quote}
                     </p>
                   </div>

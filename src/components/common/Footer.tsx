@@ -10,34 +10,34 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-stone-900 text-stone-200 pt-20 pb-12 relative overflow-hidden border-t border-stone-800">
+    <footer className="bg-stone-900 text-stone-200 pt-14 sm:pt-20 pb-8 sm:pb-12 relative overflow-hidden border-t border-stone-800">
       {/* Subtle warm glow */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
         {/* Top Brand & Headline */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-stone-800">
-          <div className="lg:col-span-5 space-y-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-12 sm:pb-16 border-b border-stone-800">
+          <div className="sm:col-span-2 lg:col-span-5 space-y-3 sm:space-y-4">
             <div className="inline-flex items-center space-x-2 text-[11px] uppercase tracking-[0.25em] text-amber-400 font-bold font-sans">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Wildlife Expeditions</span>
             </div>
-            <h3 className="font-serif text-3xl md:text-4xl text-white font-bold tracking-wider">
+            <h3 className="font-serif text-2xl sm:text-3xl md:text-4xl text-white font-bold tracking-wider">
               JAWAI SAFARI HUB
             </h3>
-            <p className="font-serif italic text-xl text-amber-300">
+            <p className="font-serif italic text-lg sm:text-xl text-amber-300">
               "Experience The Wild. Discover Jawai."
             </p>
-            <p className="text-sm text-stone-400 max-w-md leading-relaxed font-sans pt-2">
+            <p className="text-xs sm:text-sm text-stone-400 max-w-md leading-relaxed font-sans pt-1">
               Discover the prehistoric granite hill country of Rajasthan, where wild leopards roam untamed alongside ancient communities. Unforgettable 4x4 safaris and customized wildlife expeditions.
             </p>
           </div>
 
-          <div className="lg:col-span-2 space-y-4">
+          <div className="lg:col-span-2 space-y-3 sm:space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-[0.25em] text-amber-400">
               Navigation
             </h4>
-            <ul className="space-y-2.5 text-xs tracking-wider uppercase font-sans text-stone-400">
+            <ul className="space-y-2 text-xs tracking-wider uppercase font-sans text-stone-400">
               <li><Link to="/" className="hover:text-amber-400 transition-colors">Home</Link></li>
               <li><Link to="/about" className="hover:text-amber-400 transition-colors">About Jawai</Link></li>
               <li><Link to="/experiences" className="hover:text-amber-400 transition-colors">Safari Experiences</Link></li>
@@ -47,11 +47,11 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          <div className="lg:col-span-2 space-y-4">
+          <div className="lg:col-span-2 space-y-3 sm:space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-[0.25em] text-amber-400">
               Wild Expeditions
             </h4>
-            <ul className="space-y-2.5 text-xs tracking-wider font-sans text-stone-400">
+            <ul className="space-y-2 text-xs tracking-wider font-sans text-stone-400">
               <li><Link to="/experiences" className="hover:text-amber-400 transition-colors">Leopard Safari</Link></li>
               <li><Link to="/experiences" className="hover:text-amber-400 transition-colors">Jawai Jeep Safari</Link></li>
               <li><Link to="/experiences" className="hover:text-amber-400 transition-colors">Wildlife & Nature Tour</Link></li>
@@ -60,11 +60,11 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          <div className="lg:col-span-3 space-y-4">
+          <div className="sm:col-span-2 lg:col-span-3 space-y-3 sm:space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-[0.25em] text-amber-400">
               Direct Contact
             </h4>
-            <div className="space-y-3 text-xs text-stone-300 font-sans">
+            <div className="space-y-2.5 text-xs text-stone-300 font-sans">
               <a
                 href={`tel:${BUSINESS_INFO.phoneRaw}`}
                 className="flex items-center space-x-3 text-stone-200 hover:text-amber-400 transition-colors"
@@ -112,21 +112,21 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-stone-500 font-sans gap-4">
-          <div>
+        <div className="pt-6 sm:pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-stone-500 font-sans gap-4 text-center md:text-left">
+          <div className="leading-relaxed">
             ©️ Copyright 2026 | {BUSINESS_INFO.name} | All Rights Reserved | Powered by{' '}
             <a
               href="https://www.futurexdigitalmarketing.com/"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: '#28a745' }}
-              className="hover:underline font-medium"
+              className="hover:underline font-medium inline-block"
             >
               FutureX Digital Marketing
             </a>
           </div>
 
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-4 sm:space-x-6">
             <span className="hover:text-amber-400 cursor-pointer transition-colors">Privacy Policy</span>
             <span>·</span>
             <span className="hover:text-amber-400 cursor-pointer transition-colors">Terms of Service</span>

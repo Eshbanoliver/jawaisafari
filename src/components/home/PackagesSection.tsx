@@ -6,21 +6,21 @@ import { getPackageEnquiryUrl } from '../../utils/whatsapp';
 
 export const PackagesSection: React.FC = () => {
   return (
-    <section id="packages" className="py-24 md:py-36 bg-jawai-bg text-jawai-text relative grain-overlay border-b border-stone-200/60">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+    <section id="packages" className="py-16 sm:py-24 md:py-36 bg-jawai-bg text-jawai-text relative grain-overlay border-b border-stone-200/60">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24 space-y-4">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 md:mb-24 space-y-3 sm:space-y-4">
           <div className="inline-flex items-center space-x-2 px-3 py-1 bg-amber-100 rounded-full text-jawai-amber text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             <span>CURATED EXPEDITIONS</span>
           </div>
 
-          <h2 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-jawai-text font-normal leading-[1.12]">
+          <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-jawai-text font-normal leading-[1.14]">
             "Your Journey Into The Wild <br />
             <span className="text-jawai-amber italic">Begins Here."</span>
           </h2>
 
-          <p className="text-sm md:text-base text-stone-600 font-sans font-normal leading-relaxed">
+          <p className="text-xs sm:text-sm md:text-base text-stone-600 font-sans font-normal leading-relaxed">
             Select a tailored safari itinerary designed around your expedition style, photography goals, and schedule in Jawai.
           </p>
         </div>
@@ -71,7 +71,7 @@ export const PackagesSection: React.FC = () => {
                 </div>
 
                 {/* Body Content */}
-                <div className="p-8 flex-1 flex flex-col justify-between space-y-6">
+                <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-5 sm:space-y-6">
                   <div className="space-y-4">
                     <h3 className="font-serif text-2xl md:text-3xl text-jawai-text font-normal tracking-wide">
                       {pkg.name}
@@ -86,7 +86,7 @@ export const PackagesSection: React.FC = () => {
                     </p>
 
                     {/* Metadata Specs with Professional Icons */}
-                    <div className="pt-2 space-y-2 text-xs text-stone-700 font-sans border-y border-stone-200 py-3 bg-stone-50/60 -mx-8 px-8">
+                    <div className="pt-2 space-y-2 text-xs text-stone-700 font-sans border-y border-stone-200 py-3 bg-stone-50/60 -mx-6 px-6 sm:-mx-8 sm:px-8">
                       <div className="flex items-center space-x-2.5">
                         <div className="w-5 h-5 rounded-full bg-amber-100 flex items-center justify-center text-jawai-amber shrink-0">
                           <Clock className="w-3 h-3" />

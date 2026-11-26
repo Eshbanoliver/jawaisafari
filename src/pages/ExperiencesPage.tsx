@@ -21,15 +21,15 @@ export const ExperiencesPage: React.FC<ExperiencesPageProps> = ({ onOpenBookingM
       />
 
       {/* Main Experiences Detailed List */}
-      <section className="py-20 md:py-28 max-w-7xl mx-auto px-6 md:px-12">
-        <div className="space-y-24 md:space-y-32">
+      <section className="py-14 sm:py-20 md:py-28 max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+        <div className="space-y-16 sm:space-y-24 md:space-y-32">
           {EXPERIENCES.map((exp: ExperienceItem, index: number) => {
             const isReversed = index % 2 === 1;
 
             return (
               <div
                 key={exp.id}
-                className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center ${
+                className={`grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-14 items-center ${
                   isReversed ? 'lg:flex-row-reverse' : ''
                 }`}
               >
@@ -39,7 +39,7 @@ export const ExperiencesPage: React.FC<ExperiencesPageProps> = ({ onOpenBookingM
                     isReversed ? 'lg:order-2' : 'lg:order-1'
                   }`}
                 >
-                  <div className="relative h-[380px] sm:h-[480px] lg:h-[520px] overflow-hidden bg-white shadow-xl rounded-3xl border border-stone-200">
+                  <div className="relative h-[320px] sm:h-[480px] lg:h-[520px] overflow-hidden bg-white shadow-xl rounded-3xl border border-stone-200">
                     <img
                       src={exp.image}
                       alt={exp.title}
@@ -49,21 +49,21 @@ export const ExperiencesPage: React.FC<ExperiencesPageProps> = ({ onOpenBookingM
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/10 pointer-events-none" />
 
                     {/* Number Badge */}
-                    <div className="absolute top-6 left-6 z-10 bg-gradient-to-r from-jawai-amber to-jawai-terracotta text-white px-4 py-2 rounded-xl shadow-lg">
-                      <span className="font-serif text-2xl font-bold tracking-wider">
+                    <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-10 bg-gradient-to-r from-jawai-amber to-jawai-terracotta text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl shadow-lg">
+                      <span className="font-serif text-xl sm:text-2xl font-bold tracking-wider">
                         {exp.number}
                       </span>
                     </div>
 
                     {/* Time & Duration Pill */}
-                    <div className="absolute bottom-6 left-6 right-6 z-10 flex items-center justify-between text-xs text-white font-sans gap-2 flex-wrap">
-                      <span className="flex items-center space-x-1.5 bg-white/95 text-jawai-text backdrop-blur-md px-3.5 py-2 rounded-xl font-semibold shadow-md">
-                        <Sun className="w-4 h-4 text-jawai-amber" />
+                    <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 z-10 flex items-center justify-between text-xs text-white font-sans gap-2 flex-wrap">
+                      <span className="flex items-center space-x-1.5 bg-white/95 text-jawai-text backdrop-blur-md px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl font-semibold shadow-md text-[11px] sm:text-xs">
+                        <Sun className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-jawai-amber" />
                         <span>{exp.bestTime}</span>
                       </span>
 
-                      <span className="flex items-center space-x-1.5 bg-white/95 text-jawai-text backdrop-blur-md px-3.5 py-2 rounded-xl font-semibold shadow-md">
-                        <Clock className="w-4 h-4 text-jawai-amber" />
+                      <span className="flex items-center space-x-1.5 bg-white/95 text-jawai-text backdrop-blur-md px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-xl font-semibold shadow-md text-[11px] sm:text-xs">
+                        <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-jawai-amber" />
                         <span>{exp.durationPlaceholder}</span>
                       </span>
                     </div>
@@ -72,29 +72,29 @@ export const ExperiencesPage: React.FC<ExperiencesPageProps> = ({ onOpenBookingM
 
                 {/* Editorial Content Block */}
                 <div
-                  className={`lg:col-span-5 space-y-6 ${
+                  className={`lg:col-span-5 space-y-4 sm:space-y-6 ${
                     isReversed ? 'lg:order-1' : 'lg:order-2'
                   }`}
                 >
-                  <div className="space-y-2">
+                  <div className="space-y-1.5 sm:space-y-2">
                     <span className="text-xs uppercase tracking-[0.25em] text-jawai-amber font-bold font-sans">
                       EXPEDITION {exp.number}
                     </span>
-                    <h2 className="font-serif text-3xl sm:text-4xl text-jawai-text font-normal tracking-wide">
+                    <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-jawai-text font-normal tracking-wide">
                       {exp.title}
                     </h2>
                   </div>
 
-                  <p className="font-serif italic text-lg text-amber-800 bg-amber-50/80 p-3.5 rounded-xl border-l-4 border-jawai-amber leading-snug">
+                  <p className="font-serif italic text-base sm:text-lg text-amber-800 bg-amber-50/80 p-3 sm:p-3.5 rounded-xl border-l-4 border-jawai-amber leading-snug">
                     "{exp.shortDescription}"
                   </p>
 
-                  <p className="text-sm text-stone-600 font-sans leading-relaxed">
+                  <p className="text-xs sm:text-sm text-stone-600 font-sans leading-relaxed">
                     {exp.detailedDescription}
                   </p>
 
                   {/* Highlights list with green check icons */}
-                  <div className="space-y-2.5 pt-2">
+                  <div className="space-y-2 pt-1 sm:pt-2">
                     <span className="text-xs font-bold uppercase tracking-wider text-stone-400 block">
                       Key Safari Features:
                     </span>
@@ -107,12 +107,12 @@ export const ExperiencesPage: React.FC<ExperiencesPageProps> = ({ onOpenBookingM
                   </div>
 
                   {/* Actions */}
-                  <div className="pt-6 flex flex-wrap items-center gap-3.5">
+                  <div className="pt-4 sm:pt-6 flex flex-wrap items-center gap-3 sm:gap-3.5">
                     <a
                       href={getExperienceEnquiryUrl(exp.title)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-6 py-3.5 bg-gradient-to-r from-jawai-amber to-jawai-terracotta hover:from-jawai-amber-vibrant hover:to-jawai-amber text-white font-sans text-xs font-bold uppercase tracking-[0.18em] transition-all rounded-xl shadow-md hover:shadow-vibrant-glow flex items-center space-x-2"
+                      className="px-5 sm:px-6 py-3 sm:py-3.5 bg-gradient-to-r from-jawai-amber to-jawai-terracotta hover:from-jawai-amber-vibrant hover:to-jawai-amber text-white font-sans text-xs font-bold uppercase tracking-[0.18em] transition-all rounded-xl shadow-md hover:shadow-vibrant-glow flex items-center space-x-2"
                     >
                       <MessageSquare className="w-4 h-4" />
                       <span>WhatsApp Enquiry</span>
